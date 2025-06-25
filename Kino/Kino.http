@@ -1,0 +1,6 @@
+@Kino_HostAddress = http://localhost:5090
+
+GET {{Kino_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
