@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Artikl\" />
+    <Folder Include="Filmovi\" />
+    <Folder Include="KategorijaArtikl\" />
+    <Folder Include="Licnosti\" />
+    <Folder Include="Mail\" />
+    <Folder Include="User\" />
+    <Folder Include="Sale\" />
+    <Folder Include="Roles\" />
+    <Folder Include="Projekcije\" />
+  </ItemGroup>
+
 </Project>

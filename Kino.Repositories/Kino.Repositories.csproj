@@ -6,4 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Filmovi\" />
+    <Folder Include="KategorijaArtikl\" />
+    <Folder Include="Licnosti\" />
+    <Folder Include="Sale\" />
+    <Folder Include="Projekcije\" />
+  </ItemGroup>
+	
+	<ItemGroup>
+		   <ProjectReference Include="..\Kino.Core\Kino.Core.csproj" />
+        <ProjectReference Include="..\Kino.Infrastructure\Kino.Infrastructure.csproj" />
+    </ItemGroup>
+  
+
 </Project>
