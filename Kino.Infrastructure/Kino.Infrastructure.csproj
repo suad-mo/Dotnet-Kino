@@ -7,9 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="AutoMaper\" />
-    <Folder Include="Database\" />
     <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kino.Core\Kino.Core.csproj" />
   </ItemGroup>
 
 </Project>
