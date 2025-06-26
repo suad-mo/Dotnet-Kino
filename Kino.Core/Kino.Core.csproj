@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Authentication\" />
-    <Folder Include="Pagination\" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.17" />
   </ItemGroup>
 
 </Project>
