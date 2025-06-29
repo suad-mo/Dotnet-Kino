@@ -7,14 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Filmovi\" />
-    <Folder Include="KategorijaArtikl\" />
-    <Folder Include="Licnosti\" />
-    <Folder Include="Mail\" />
-    <Folder Include="User\" />
-    <Folder Include="Sale\" />
-    <Folder Include="Roles\" />
-    <Folder Include="Projekcije\" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.17" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.1.2" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" />
   </ItemGroup>
 
   <ItemGroup>

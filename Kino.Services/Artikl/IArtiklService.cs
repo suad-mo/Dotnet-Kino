@@ -7,9 +7,9 @@ namespace Kino.Services.Artikl
     {
         List<ArtiklViewModel> GetAllArtikle(int pageNumber, int pageSize, string searchType, string searchQuery);
         List<ArtiklViewModel> GetArtikle();
-        ArtiklViewModel GetOneArtikl(int id);
-        ArtiklViewModel Save(ArtiklViewModel artiklViewModel);
-        ArtiklViewModel Delete(int id);
+        ArtiklViewModel? GetOneArtikl(int id);
+        ArtiklViewModel? Save(ArtiklViewModel artiklViewModel);
+        ArtiklViewModel? Delete(int id);
         PaginationMetadata GetPaginationMetadata(int pageSize);
     }
 }

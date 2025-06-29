@@ -4,7 +4,7 @@ using Kino.Infrastructure.Database;
 
 namespace Kino.Repositories.KategorijaArtikl
 {
-    public class KategorijaArtiklRepository
+    public class KategorijaArtiklRepository : IKategorijaArtiklRepository
     {
         private readonly DatabaseContext _context;
 

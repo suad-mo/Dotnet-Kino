@@ -4,10 +4,8 @@ using Kino.Core.Entities;
 
 namespace Kino.Infrastructure.Database
 {
-    public class DatabaseContext : IdentityDbContext<UserAccount>
+    public class DatabaseContext(DbContextOptions<DatabaseContext> options) : IdentityDbContext<UserAccount>(options)
     {
-        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
-
         public DbSet<Film> Film { get; set; }
         public DbSet<Sala> Sala { get; set; }
         public DbSet<Red> Red { get; set; }

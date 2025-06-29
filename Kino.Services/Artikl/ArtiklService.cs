@@ -5,17 +5,12 @@ using Kino.Repositories.Artikl;
 
 namespace Kino.Services.Artikl
 {
-    public class ArtiklService : IArtiklService
+    public class ArtiklService(IArtiklRepository artiklRepository, IMapper mapper) : IArtiklService
     {
-        private readonly IArtiklRepository _artiklRepository;
-        private readonly IMapper _mapper;
+        private readonly IArtiklRepository _artiklRepository = artiklRepository;
+        private readonly IMapper _mapper = mapper;
 
-        public ArtiklService(IArtiklRepository artiklRepository, IMapper mapper)
-        {
-            _artiklRepository = artiklRepository;
-            _mapper = mapper;
-        }
-        public ArtiklViewModel Delete(int id)
+        public ArtiklViewModel? Delete(int id)
         {
             var artikl = _artiklRepository.Delete(id);
             if (artikl == null)
@@ -28,12 +23,12 @@ namespace Kino.Services.Artikl
         {
             var artikl = _artiklRepository.GetAll();
             if (artikl == null || artikl.ToArray().Length == 0)
-                return null;
+              return [];
 
             return _mapper.Map<List<ArtiklViewModel>>(artikl);
         }
 
-        public ArtiklViewModel GetOneArtikl(int id)
+        public ArtiklViewModel? GetOneArtikl(int id)
         {
             var artikl = _artiklRepository.GetOne(id);
             if (artikl == null)
@@ -42,7 +37,7 @@ namespace Kino.Services.Artikl
             return _mapper.Map<ArtiklViewModel>(artikl);
         }
 
-        public ArtiklViewModel Save(ArtiklViewModel artiklViewModel)
+        public ArtiklViewModel? Save(ArtiklViewModel artiklViewModel)
         {
             var artikl = _artiklRepository.Save(artiklViewModel);
             if (artikl == null)
